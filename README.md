@@ -1,4 +1,4 @@
-# Software-project
+# E-Commerce-project
 
 Software Engineering Proposal Summary: E-commerce Website Development
 
