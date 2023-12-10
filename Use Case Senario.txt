@@ -1,0 +1,225 @@
+User Registration and Authentication:
+
+        Use Case Name: New User Registration
+            Actor: Guest User
+            Precondition: The user is not registered in the system.
+            Happy Flow:
+                User navigates to the registration page.
+                User provides required information (name, email, password, etc.).
+                System validates information and creates a new user account.
+            Alternative Flow:
+                If the provided email already exists, the system prompts the user to log in or recover their password.
+            Postcondition: The user is registered and can log in with the provided credentials.
+
+        Use Case Name: User Login
+            Actor: Registered User
+            Precondition: The user has a registered account.
+            Happy Flow:
+                User enters their email and password on the login page.
+                System verifies the credentials and grants access.
+            Alternative Flow:
+                If the entered credentials are incorrect, the system displays an error message.
+            Postcondition: The user is logged in and can access their account.
+
+    Product Browsing:
+
+        Use Case Name: Browse Products
+            Actor: Any User
+            Precondition: The user is on the E-commerce platform.
+            Happy Flow:
+                User navigates to the product browsing section.
+                System displays a list of available products.
+            Alternative Flow: None
+            Postcondition: The user can see a list of products.
+
+        Use Case Name: Search for Products
+            Actor: Any User
+            Precondition: The user is on the E-commerce platform.
+            Happy Flow:
+                User enters search keywords in the search bar.
+                System displays relevant products matching the search.
+            Alternative Flow: None
+            Postcondition: The user sees search results based on their input.
+
+        Use Case Name: Filter and Sort Products
+            Actor: Any User
+            Precondition: The user is on the product listing page.
+            Happy Flow:
+                User applies filters (e.g., price range, category).
+                System updates the product list based on the applied filters.
+            Alternative Flow: None
+            Postcondition: The user sees a refined list of products.
+
+    Product Management:
+
+        Use Case Name: Add Product to Cart
+            Actor: Registered User
+            Precondition: The user is logged in and viewing a product.
+            Happy Flow:
+                User clicks on the "Add to Cart" button.
+                System adds the selected product to the user's shopping cart.
+            Alternative Flow: None
+            Postcondition: The product is added to the user's shopping cart.
+
+        Use Case Name: Remove Product from Cart
+            Actor: Registered User
+            Precondition: The user has items in their shopping cart.
+            Happy Flow:
+                User goes to the shopping cart.
+                User clicks on the "Remove" option next to a product.
+                System removes the selected product from the cart.
+            Alternative Flow: None
+            Postcondition: The selected product is removed from the user's cart.
+
+        Use Case Name: View Product Details
+            Actor: Any User
+            Precondition: The user is on the product details page.
+            Happy Flow:
+                User clicks on a product to view its details.
+                System displays detailed information about the selected product.
+            Alternative Flow: None
+            Postcondition: The user sees detailed information about the product.
+
+    Checkout Process:
+
+        Use Case Name: Proceed to Checkout
+            Actor: Registered User
+            Precondition: The user has items in their shopping cart.
+            Happy Flow:
+                User clicks on the "Proceed to Checkout" button.
+                System takes the user to the checkout page.
+            Alternative Flow: None
+            Postcondition: The user is on the checkout page.
+
+        Use Case Name: Select Shipping Address
+            Actor: Registered User
+            Precondition: The user is on the checkout page.
+            Happy Flow:
+                User selects a saved shipping address or enters a new one.
+                System validates and saves the selected shipping address.
+            Alternative Flow: None
+            Postcondition: The shipping address is selected and saved.
+
+        Use Case Name: Choose Payment Method
+            Actor: Registered User
+            Precondition: The user is on the checkout page.
+            Happy Flow:
+                User selects a payment method (credit card, PayPal, etc.).
+                System prompts the user to enter payment details.
+                User enters payment details.
+                System validates the payment information.
+            Alternative Flow:
+                If payment validation fails, the system prompts the user to correct the information.
+            Postcondition: The payment method is selected and validated.
+
+        Use Case Name: Confirm Order
+            Actor: Registered User
+            Precondition: The user has completed the shipping and payment steps.
+            Happy Flow:
+                User reviews the order details.
+                User clicks on the "Confirm Order" button.
+                System processes the order and generates an order confirmation.
+            Alternative Flow: None
+            Postcondition: The order is confirmed, and the user receives an order confirmation.
+
+    Order Management:
+
+        Use Case Name: View Order History
+            Actor: Registered User
+            Precondition: The user is logged in.
+            Happy Flow:
+                User navigates to the order history section.
+                System displays a list of past orders.
+            Alternative Flow: None
+            Postcondition: The user can see their order history.
+
+        Use Case Name: Track Order
+            Actor: Registered User
+            Precondition: The user has a recent order.
+            Happy Flow:
+                User selects the order they want to track.
+                System displays real-time tracking information (if available).
+            Alternative Flow:
+                If tracking information is not available, the system informs the user.
+            Postcondition: The user can track the status and location of their order.
+
+        Use Case Name: Cancel Order
+            Actor: Registered User
+            Precondition: The user has placed an order.
+            Happy Flow:
+                User goes to the order details page.
+                User clicks on the "Cancel Order" button.
+                System cancels the order and initiates a refund process.
+            Alternative Flow:
+                If the order cannot be canceled (e.g., already shipped), the system informs the user.
+            Postcondition: The order is canceled, and the user is refunded.
+
+    User Account Management:
+
+        Use Case Name: Update User Profile
+            Actor: Registered User
+            Precondition: The user is logged in.
+            Happy Flow:
+                User goes to the profile settings page.
+                User updates profile information (e.g., name, contact details).
+                System validates and saves the updated information.
+            Alternative Flow:
+                If validation fails, the system prompts the user to correct the information.
+            Postcondition: The user's profile is updated.
+
+        Use Case Name: Change Password
+            Actor: Registered User
+            Precondition: The user is logged in.
+            Happy Flow:
+                User goes to the change password section.
+                User enters the current password and a new password.
+                System validates and updates the password.
+            Alternative Flow:
+                If the current password is incorrect or validation fails, the system prompts the user.
+            Postcondition: The user's password is changed.
+
+        Use Case Name: Logout
+            Actor: Registered User
+            Precondition: The user is logged in.
+            Happy Flow:
+                User clicks on the "Logout" button.
+                System logs the user out, ending the session.
+            Alternative Flow: None
+            Postcondition: The user is logged out.
+
+    Customer Support:
+
+        Use Case Name: Contact Customer Support
+            Actor: Any User
+            Precondition: The user needs assistance.
+            Happy Flow:
+                User navigates to the customer support section.
+                User selects a contact option (e.g., live chat, email, phone).
+                User communicates their issue or inquiry.
+                Customer support acknowledges and provides assistance.
+            Alternative Flow:
+                If live chat or phone support is not available, the system prompts the user to use an alternative method.
+            Postcondition: The user receives assistance from customer support.
+
+        Use Case Name: Return a Product
+            Actor: Registered User
+            Precondition: The user has received a product and wants to return it.
+            Happy Flow:
+                User goes to the return section in their order history.
+                User selects the product they want to return.
+                User provides a reason for the return.
+                System generates a return request and provides instructions.
+            Alternative Flow:
+                If the return request is declined, the system informs the user of the decision.
+            Postcondition: The return request is submitted, and the user receives instructions for the return process.
+
+        Use Case Name: Resolve an Issue
+            Actor: Customer Support
+            Precondition: Customer support has received a user inquiry or complaint.
+            Happy Flow:
+                Customer support acknowledges the user's issue.
+                Customer support investigates the problem.
+                Customer support communicates a solution or resolution to the user.
+            Alternative Flow:
+                If the issue requires further escalation, customer support informs the user and escalates the case.
+            Postcondition: The user's issue is resolved or a resolution plan is communicated.
